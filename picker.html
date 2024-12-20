@@ -1,0 +1,27 @@
+<div class="date-box" style="width: 205px; height: 50px; margin-top: 20px; position: relative;">
+    <label for="pickup-time" class="time-label" style="position: absolute; color: #130c0c; left: 10px; top: -18px; font-size: 17px; margin-bottom: 10px;">Passengers</label>
+    
+    <input type="text" id="hotel-adult" value="1 Adult, 0 Children, 1 Room" readonly onclick="togglePassengerDropdown()" style="margin-top: 30px;">
+    
+    <!-- Dropdown for Adult, Children, Room count controls -->
+    <div id="hotelPassengerDropdown" class="dropdown" style="display: none;">
+        <div class="room-controls">
+            <label>Adults</label>
+            <button type="button" onclick="changeCount('adult', -1)">-</button>
+            <span id="hotelAdultCount">1</span>
+            <button type="button" onclick="changeCount('adult', 1)">+</button>
+        </div>
+        <div class="room-controls">
+            <label>Children</label>
+            <button type="button" onclick="changeCount('children', -1)">-</button>
+            <span id="hotelChildrenCount">0</span>
+            <button type="button" onclick="changeCount('children', 1)">+</button>
+        </div>
+        <div class="room-controls">
+            <label>Rooms</label>
+            <button type="button" onclick="changeCount('room', -1)">-</button>
+            <span id="hotelRoomCount">1</span>
+            <button type="button" onclick="changeCount('room', 1)">+</button>
+        </div>
+    </div>
+</div>
